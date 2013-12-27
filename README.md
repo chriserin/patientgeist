@@ -1,6 +1,6 @@
 # Patientgeist
 
-TODO: Write a gem description
+Be patient when making ajax requests in poltergeist.  Do not take the next action until the ajax request has been completed.
 
 ## Installation
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+    click_button 'save'
+    wait_for_ajax
+    expect(find('#message')).to equal('saved')
+```
+
+Can now be:
+```ruby
+    click_button 'save'
+    expect(find('#message')).to equal('saved')
+```
 
 ## Contributing
 
