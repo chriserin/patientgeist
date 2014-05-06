@@ -1,3 +1,5 @@
+require 'capybara/poltergeist'
+
 module Capybara::Poltergeist
   class Client
     alias old_command command

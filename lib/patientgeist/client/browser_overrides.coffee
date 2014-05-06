@@ -11,8 +11,7 @@ class Poltergeist.Browser extends Poltergeist.Browser
   additionalReset: =>
     @jsonRequests = []
     @page.onResourceRequested = (request) =>
-      if request.url.match(/\.json$/)
-        @jsonRequests.push(request.id)
+      @jsonRequests.push(request.id)
 
   sendResponse: (response) ->
     if not @responseCallback(response)
